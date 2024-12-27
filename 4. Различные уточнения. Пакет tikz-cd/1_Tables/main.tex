@@ -1,0 +1,50 @@
+\documentclass[a4paper, 12pt]{article}
+
+\input{../preamble.tex}
+
+\usepackage{array} % Для {p{2cm}|m{3cm}|b{4cm}}
+
+\usepackage{tabularx} % Для использования X как ширины колонок таблиц
+
+% tabbing - устаревший способ создания таблиц, не использовать!
+
+\begin{document}
+    % p - выравнивание по верхнему краю
+    % m - выравнивание по середине
+    % b - выравнивание по нижнему краю
+    % cm - сантиметры
+    % По умолчанию выранивание vvv по ширине
+
+    \begin{tabular}{|p{2cm}|m{3cm}|b{4cm}|}
+        text & text & text
+    \end{tabular}\\
+
+    \begin{tabular}{|p{2cm}|m{3cm}|c|} % Для столбца с c подберёт оптимальную ширину
+        text & text & text
+    \end{tabular}\\
+
+    % >{\bfseries \itshape Exp.} - код будет применён к каждому элементу столбца до (>{}) текста столбца
+    \begin{tabular}{|p{2cm}|m{3cm}|>{\bfseries \itshape Exp. }c|} % Для столбца с "c" подберётся оптимальная ширина
+        text & text & text\\
+        text & text & text
+    \end{tabular}\\
+
+    % <{ End.} - код будет применён к каждому элементу столбца после (<{}) текста столбца
+    \begin{tabular}{|p{2cm}|m{3cm}|c<{ End.}|} % Для столбца с "c" подберётся оптимальная ширина
+        text & text & text\\
+        text & text & text
+    \end{tabular}\\
+
+    % >{\bfseries \itshape Exp.} - код будет применён к каждому элементу столбца до (>{}) текста столбца
+    % <{ End.} - код будет применён к каждому элементу столбца после (<{}) текста столбца
+    \begin{tabular}{|p{2cm}|m{3cm}|>{\bfseries \itshape Exp. }c<{ End.}|} % Для столбца с "c" подберётся оптимальная ширина
+        text & text & text\\
+        text & text & text
+    \end{tabular}\\
+
+    % X - будет равная ширина колонок, вычесленная автоматически
+    % \textwidth - ширина всей таблицы (в данном случае совпадает с шириной строки документа)
+    \begin{tabularx}{\textwidth}{|X|X|X|}
+        text text text & text text text & text text text
+    \end{tabularx}\\
+\end{document}

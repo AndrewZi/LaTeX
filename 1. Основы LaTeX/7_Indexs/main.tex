@@ -1,0 +1,29 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[english, russian]{babel}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+    Нижний индекс: $n_k, n_{mk}$
+
+    Верхний индекс: $n^k, n^{mk}$
+
+    Смесь индексов:
+    \[n_k^m, n^m_k, n_{tk}^m, n^m_{tk}, n_k^{tm}, n^{tm}_k, n_{lt}^{mu}, n^{mu}_{lt}\]
+
+    Из олимпиады:
+    \[x_{i+j}^2024\] % Отображение не совпадает с ожидаемым
+
+    Из олимпиады:
+    \[x_{i+j}^{2024}\]
+    % \[x_m_n\] - ошибка копиляции
+    % \[x^2^0^2^4\] - ошибка компиляции
+    % Но
+
+    Также из олимпиады:
+    \[x_{m_{n_k}}\]
+
+    Также из олимпиады:
+    \[x^{2^{0^{2^4}}}\]
+\end{document}

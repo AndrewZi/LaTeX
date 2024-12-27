@@ -1,0 +1,17 @@
+# Fdb version 4
+["pdflatex"] 1734777077.6727 "c:/Users/Lenovo/Documents/Programms for Visual Studio Code/LaTeX/Learning LaTeX/1. Основы LaTeX/1_Hello_world/main.tex" "main.pdf" "main" 1734777077.97721 0
+  "C:/Users/Lenovo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1734769830 81684 e11c674afe7630b828c4f0e88a1b8253 ""
+  "C:/Users/Lenovo/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1730327974 24265806 8be596211a6df069bd63175af5021aae ""
+  "C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr12.tfm" 1136765053 1288 655e228510b4c2a1abe905c368440826 ""
+  "C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1247596667 32722 d7379af29a190c3f453aba36302ff5a9 ""
+  "C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/tex/latex/base/article.cls" 1719393830 20144 67a5f8e0f9e445e8ec6834e595cebdc9 ""
+  "C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/tex/latex/base/size12.clo" 1719393830 8449 30d84ec2eac77409e31fe51403c1ed64 ""
+  "C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1716480499 29785 9f93ab201fe5dd053afcc6c1bcf7d266 ""
+  "c:/Users/Lenovo/Documents/Programms for Visual Studio Code/LaTeX/Learning LaTeX/1. Основы LaTeX/1_Hello_world/main.tex" 1734777077 168 3e07089fbf097b6c6605c9c8b8046f2a ""
+  "main.aux" 1734777077 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "main.tex" 1734777077 168 3e07089fbf097b6c6605c9c8b8046f2a ""
+  (generated)
+  "main.aux"
+  "main.log"
+  "main.pdf"
+  (rewritten before read)

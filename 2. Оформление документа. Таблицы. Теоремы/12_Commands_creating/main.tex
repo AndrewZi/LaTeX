@@ -1,0 +1,31 @@
+\documentclass[a4paper, 12pt]{article}
+
+\input{../preambule.tex}
+
+\usepackage{amssymb} % для \varkappa
+
+\usepackage{amsfonts} % для \mathbb
+
+\newcommand{\deriv}[2]{\frac{\partial #1}{\partial #2}} % Добавление новой команды
+% \deriv - название команды;
+% 2 - количество аргументов (может и не быть, тогда [](<-- опциональный элемент) опускается);
+% \frac{\patrial #1}{\patrial #2} - текст команды;
+% \partial - символ частной производной;
+% #1, #2 - аргументы (из тех тех двух, которые в [2]), # - обращение к аргументу.
+
+\newcommand{\R}{\mathbb R} % аргументов нет (Добавление новой команды)
+
+\renewcommand{\phi}{\varphi} % Переопределение существующей команды (нельзя переопределять новую команду!)
+% \deriv - название команды;
+% \varphi - переопределяемая команда;
+
+\renewcommand{\epsilon}{\varepsilon} % Переопределение существующей команды (нельзя переопределять новую команду!)
+
+\renewcommand{\kappa}{\varkappa} % Переопределение существующей команды (нельзя переопределять новую команду!)
+
+\begin{document}
+    \[\forall x, y \in \R : df(x, y) = \deriv{f}{x}(x, y)dx + \deriv{f}{y}(x, y)dy\]
+    % \in - квантор принадлежности
+
+    Теперь мы имеем красивые $\phi$, $\epsilon$ и $\kappa$.
+\end{document}

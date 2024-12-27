@@ -1,0 +1,38 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[english, russian]{babel}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsthm}
+\theoremstyle{plain} % Стиль записи словосочетаний "Теорема N" или "Лемма N"
+\newtheorem{theorem}{Теорема} % Создание окружения (внутри окружения своя нумерация)
+% \newtheorem* - отсутствие нумерации
+\newtheorem{lemma}{Лемма} % Содание окружения (внутри окружения своя нумерация)
+% \newtheorem* - отсутствие нумерации
+
+\begin{document}
+    \begin{theorem} % Нумерация прописывается автоматически
+        \[a^2 + b^2 = c^2\]
+    \end{theorem}
+
+    \begin{lemma} % Нумерация прописывается автоматически
+        \[0 \cdot a = 0\]
+    \end{lemma}
+
+    \begin{theorem} % Нумерация прописывается автоматически
+        \[a^2 + b^2 = c^2\]
+    \end{theorem}
+
+    \begin{lemma} % Нумерация прописывается автоматически
+        \[0 \cdot a = 0\]
+    \end{lemma}
+
+    \begin{theorem} % Нумерация прописывается автоматически
+        \[a^2 + b^2 = c^2\]
+    \end{theorem}
+
+    \begin{lemma} % Нумерация прописывается автоматически
+        \[0 \cdot a = 0\]
+    \end{lemma}
+\end{document}

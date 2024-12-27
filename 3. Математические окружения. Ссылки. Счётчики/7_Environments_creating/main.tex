@@ -1,0 +1,26 @@
+\documentclass[a4paper, 12pt]{article}
+
+\input{../preamble.tex}
+
+\begin{document}
+    % \newenvironment{name}{preceding_code}{succeeding_code}
+    % name - название создаваемого окружения
+    % preceding_code - код перед объектом, на который воздействует окружение
+    % succeeding_code - код после объекта, на который воздействует окружение
+
+    \newenvironment{centerbold} % centerbold - название создаваемого окружения
+    % Не выдаёт ошибку компиляции (например, незакрытое окружение) до использования
+    {\begin{center}\bfseries} % <-- preceding_code
+% \bfseries - модификатор (работает до конца блока, где добавлен, т. е. окружения center)
+    {\end{center}} % <-- succeeding_code
+
+    \begin{centerbold}
+        Текст.
+    \end{centerbold}
+
+    % Что делает LaTeX:
+    \begin{center}\bfseries % <-- preceding_code
+% \bfseries - модификатор (работает до конца блока, где добавлен, т. е. окружения center)
+        Текст.
+    \end{center} % <-- succeeding_code
+\end{document}

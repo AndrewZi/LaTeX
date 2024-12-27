@@ -1,0 +1,30 @@
+\documentclass[a4paper, 12pt]{article}
+
+\input{../preamble.tex}
+
+\usetikzlibrary{through, intersections} % Для through и intersections(!)
+
+\begin{document}
+    \begin{tikzpicture}
+        \coordinate (A) at (0, 0);
+        \coordinate (B) at (3, 0);
+        \draw [name path = A--B] (A) -- (B); % Сразу создаются два узла и сразу соединяются
+        % Имя пути: A--B (обязательно должны быть использованы, иначе произойдёт ошибка компиляции)
+        
+        \node (D) [name path = D, draw, circle through = (B),
+            label = left:$D$] at (A) {};
+        % Имя пути, созданного узлом D: D (обязательно должно быть использовано, иначе произойдёт ошибка компиляции)
+
+        \node (E) [name path = E, draw, circle through = (A),
+            label = right:$E$] at (B) {};
+        % Имя пути, созданного узлом E: E (обязательно должно быть использовано, иначе произойдёт ошибка компиляции)
+
+        \path [name intersections = {of = D and E, % в параметре of передаются объекты, пересечения которых должно быть инициализированы
+        % (при этом они не обязательно должны быть отображены в документе)
+            by = {[label = above:$C$]C, % Первое пересечение (в [...] задаются параметры отображения), инициализируется точка C
+                [label = below:$C'$]C'}}]; % Второе пересение (в [...] задаются параметры отображения), инициализируется точка C'
+        
+        \draw [name path = C--C', color = red] (C) -- (C'); % color = red <-- Цвет отображаемого пути
+        \path [name intersections = {of = A--B and C--C', by = F}]; % Так как нет [label = above:$F$] перед F в by, точка F на рисунке подписана не будет
+    \end{tikzpicture}
+\end{document}

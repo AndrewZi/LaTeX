@@ -1,0 +1,54 @@
+\documentclass[a4paper, 12pt]{article}
+
+\input{../preamble.tex}
+
+\usepackage{amsmath}
+
+% Встроенные счётчики
+% • part, section, etc.;
+% • page, figure, table, footnote;
+% • enumi, enumii, enumiii, enumiv;
+% • equation
+
+\begin{document}
+    \newcounter{name} % Инициализация счётчика name
+    % \newcounter{other_name} Инициализация счётчика other_name
+    % \newcounter{name}[other_name] other_name будет обнуляться при инкрементировании name
+
+    % \setcounter{name}{5} Задать значение 5 (можно и положительное, и отрицательное) для name
+    % \stepcounter{name} Инкементировать name (добавить 1)
+    % \addtocounter{name}{5} Прибавить к name число 5 (можно и положительное, и отрицательное)
+
+    \setcounter{name}{22} % Задание значения 22 счётчику name
+    \[\thename, \arabic{name}\]\\
+
+    \[\roman{name}, \Roman{name}\]\\ % Допустимы только положительные значения счётчика!
+
+    \[\alph{name}, \Alph{name}\] % Допустимы только значения счётчика с 0 до 26(!)
+
+    \small{Значение счётчика section: \thesection % получение значения счётчика section
+    }
+
+    \section{Первый раздел}
+    \small{Значение счётчика section: \thesection % получение значения счётчика section
+    }
+
+    \setcounter{section}{4} % Изменение значения счётчика секций
+    \section{Пятый раздел} % \section => инкрементирование значения счётчика,
+    \small{Значение счётчика section: \thesection % получение значения счётчика section
+    }
+
+    % поэтому для получения 5, устанавливаем значение счётка на 4(!)
+
+    \begin{enumerate}
+        \item \begin{enumerate}
+            \item Первый пункт
+            \setcounter{enumii}{3} % \item => инкрементирование значения счётчика,
+            % поэтому для получения 4, устанавливаем значение счётка второго уровня (enumii) на 3(!)
+            \item Четвёртый пункт
+            \end{enumerate}
+        \setcounter{enumi}{2} % \item => инкрементирование значения счётчика,
+        % поэтому для получения 3, устанавливаем значение счётка первого уровня (enumi) на 2(!)
+        \item Третий пункт
+    \end{enumerate}
+\end{document}

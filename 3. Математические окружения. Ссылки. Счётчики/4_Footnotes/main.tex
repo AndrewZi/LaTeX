@@ -1,0 +1,12 @@
+\documentclass[a4paper, 12pt]{article}
+
+\input{../preamble.tex}
+
+\begin{document}
+    Какой-то текст
+    \footnote{Здесь сноска \label{footnote_1}}
+% Сноски автоматически нумеруются, текст сноски ^^^: Здесь сноска
+    \\
+
+    См. сноску \ref{footnote_1} % Можно ссылаться на сноски
+\end{document}

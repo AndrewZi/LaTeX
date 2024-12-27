@@ -1,0 +1,54 @@
+\documentclass[a4paper]{article}
+
+\input{../preamble.tex}
+
+\usepackage{amsmath}
+
+\begin{document}
+    \begin{multline}
+        \int \dots = \dots = \dots = \dots = \dots =\\
+        \hspace{200pt} % В этом случае аргумент может быть, как положительный, так и отрицательный
+        = \dots = \dots = \dots = \dots =\\
+        % \hspace{-200pt} Здесь работать не будет!
+        = \dots = \dots = \dots = 1
+    \end{multline}
+
+    \[
+        \begin{split} % Аналог align
+            \int \dots = \dots = \dots = \dots = \dots =\\
+            = \dots = \dots = \dots = \dots =\\
+            = \dots = \dots = \dots = 1
+        \end{split}
+    \]
+
+    \begin{align*}
+        F = \frac{dp}{dt} \tag{II ЗН} % \tag позволяет справа помечать математические выражения
+    \end{align*}
+
+    \[
+        \begin{cases} % Использование cases не по назначению!
+            2 + 2 = 4
+        \end{cases}
+    \]
+
+    \[
+        \begin{aligned} % Пример использования aligned
+            2 + 2 = 4\\
+            3 + 2 = 5
+        \end{aligned}
+    \]
+
+    \begin{align*}
+        \begin{cases} % Система уравнений
+            ax + by = e,\\
+            cx + dy = f.
+        \end{cases}
+    \end{align*}
+
+    \[
+        \left[\begin{aligned}
+            &x + y = 5\\ % Выравнивание по &
+            &2x + 5y = 36 % Выравнивание по &
+        \end{aligned}\right. % \right. <-- . - нет правой квадратной скобки
+    \]
+\end{document}

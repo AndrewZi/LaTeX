@@ -1,0 +1,12 @@
+\documentclass[a4paper, 12pt]{article}
+
+% \usepackage{mathtext} Лучше не использовать.
+\usepackage{amsmath} % Лучший вариант.
+
+\input{../preambule.tex} % ../ - из родительской директории
+% ^^^ Удобно, чтобы каждый раз не писать подключение постоянно используемых пакетов
+
+\begin{document}
+    % А + Б = В <-- было бы, если бы был подключён пакет mathtext
+    \text{А} + \text{Б} = \text{В} % \text{...} - фигурные скобки обязательны.
+\end{document}

@@ -1,0 +1,31 @@
+\documentclass[a4paper, 12pt]{article}
+
+\input{../preamble.tex}
+
+\usetikzlibrary{calc}
+
+\begin{document}
+    \begin{tikzpicture}
+        \coordinate [label = left:$A$] (A) at (0, 0);
+        % Будет инициализирована точка A, а также отображена подпись "A" этой точки в документе
+
+        \coordinate [label = right:$B$] (B) at (5, 4);
+        % Будет инициализирована точка B, а также отображена подпись "B" этой точки в документе
+
+        \draw (A) -- (B);
+
+        \node [fill = red, inner sep = 2pt, label = above:$D$] % inner sep - внутренний отступ (внутреннее расстояние) между содержимым узла и его границей
+        % Благодаря inner sep получаем небольшой квадрат
+            (D) at ($(A) ! .5 ! (B) ! {sin(60) * 2} ! 90:(B)$) {}; % .5 <=> 0.5
+
+        \draw (A) -- (D) -- (B);
+
+        \node [fill = gray, inner sep = 2pt, label = right:$X$]
+        % Благодаря inner sep получаем небольшой квадрат
+            (X) at ($(A) ! .5 ! (B)$) {};  % .5 <=> 0.5
+
+        \draw [very thick, dashed] (A) -- (X);
+        \draw [very thick, dashed] (X) -- ($(X) ! {sin(60) * 2} ! 90:(B)$); % Можно было: \draw [very thick, dashed] (X) -- (D);
+        % ^^^ $(X) ! {sin(60) * 2} ! 90:(B)$ <-- сразу вернёт точку (узел)
+    \end{tikzpicture}
+\end{document}

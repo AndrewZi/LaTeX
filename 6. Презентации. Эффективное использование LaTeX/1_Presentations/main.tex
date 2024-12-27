@@ -1,0 +1,43 @@
+\documentclass[10pt, hideallsubsections]{beamer} % Для создания презентаций
+% hideallsubsections <-- навигация только по секциям первого уровня вложенности
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel} % Лучше, когда после fontenс и inputenc
+
+% Основной принцип - каждый слайд помещается в особое окружение frame
+
+% vvv - рекомендуется размещать в файле преамбулы
+\usetheme{CambridgeUS} % Полностью задаёт стиль презентации по заданному шаблону
+\usecolortheme{dolphin} % Меняет только (!) цветовую палитру
+
+% Справка. Темы:
+% \usefonttheme
+% \useinnertheme
+% \useoutertheme
+% ... См. основные темы beamer LaTeX в Интернете
+
+\setbeamertemplate{navigation symbols}{} % Применение шаблона для beamer
+% (здесь: удаление навигационных кнопок)
+% ^^^
+
+% Разделы section и subsection остаются такими же, как и в обычных документах.
+% Их следует размещать вне окружений frame, чтобы добиться объединения нескольких слайдов
+% в одну секцию, что очень полезно для структурированного оглавления презентации.
+% В противном случае описанного выше результата не будет, и тогда эти разделы теряют смысл. 
+
+\begin{document}
+    \AtBeginSection[]{ % Располагается до всех разделов section, subsection, а также frame
+        \begin{frame}{Table of contents} % Для frame "обязателен" (согласно синтаксису LaTeX, но можно и без него) заголок - текст в {...}
+            \tableofcontents[currentsection] % currentsection - хранит информацию о текущей секции
+        \end{frame}
+    }
+    \section{Начало презентации}
+    \begin{frame}{Слайд 1}
+        Начальная информация
+    \end{frame}
+    \section{Продолжение}
+    \begin{frame}{Слайд 2}
+        Последующая информация
+    \end{frame}
+\end{document}

@@ -1,0 +1,25 @@
+\documentclass[a4paper, 12pt]{article}
+
+\input{../preambule.tex}
+
+\usepackage{amsmath} % Для \DeclareMathOperator
+\usepackage{amsfonts} % Для \mathbb
+
+\DeclareMathOperator{\Kerr}{Ker}
+\DeclareMathOperator{\Imm}{Im} % \Imm_a^b - нижний и верхний индексы
+
+\DeclareMathOperator*{\Imma}{Im} % \Imm_a^b - нижний и верхний пределы (если формула в \[\] (!))
+
+\DeclareMathOperator*{\argmax}{argmax}
+
+\begin{document}
+    \[\dim \Kerr \varphi + \dim \Imm \varphi = \dim V\]
+
+    \[\Imm_a^b \varphi\] % a, b - нижний и верхний индексы соответственно
+
+    Внимание: $\Imma_a^b \varphi$ % Ничего не поменялось, так как строчная формула
+    
+    \[\Imma_a^b \varphi\] % a, b - нижний и верхний пределы соответственно
+
+    \[\argmax_{x \in \mathbb R} f(x) = + \infty\]
+\end{document}

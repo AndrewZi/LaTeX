@@ -1,0 +1,18 @@
+\documentclass[a4paper]{article}
+
+\input{../preambule.tex}
+
+\begin{document}
+    \begin{itemize} % Ненумерованный список
+        \item Первый пункт % • <-- по умолчанию
+        \item[+] Второй пункт % + <-- это то, что будет вместо •
+    \end{itemize}
+
+    \begin{enumerate} % Нумерованный список
+        \item Первый нумерованный пункт
+        \item \begin{enumerate} % Нумерованный список
+            \item Первый подпункт
+            \item Второй подпункт
+        \end{enumerate}
+    \end{enumerate}
+\end{document}
