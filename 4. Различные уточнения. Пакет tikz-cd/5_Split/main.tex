@@ -1,0 +1,36 @@
+\documentclass[a4paper, 12pt]{article}
+
+\input{../preamble.tex}
+
+\usepackage{amsmath}
+
+\begin{document}
+    \begin{equation} % Нумеруется автоматически
+        \begin{split} % Требует математического окружения вне себя
+            \dot x &= 2x + y\\ % Выравнивание строк по &
+            \dot y &= 3x + 5y % Выравнивание строк по &
+        \end{split}
+    \end{equation}
+
+    \begin{equation} % Нумеруется автоматически
+        \begin{split} % Требует математического окружения вне себя
+            \dot z &= 7x + y + z\\ % Выравнивание строк по &
+            \dot y &= 2x + 9y % Выравнивание строк по &
+        \end{split}
+    \end{equation}
+
+    % \begin{equation}
+        % \left\{\begin{split} <-- Split (Сплиту) "неприятен" какой-либо текст, LaTeX просит заменить на aligned
+            % \dot x &= 2x + y\\ Выравнивание строк по &
+            % \dot y &= 3x + 5y Выравнивание строк по &
+        % \end{split}\right.
+    % \end{equation}
+
+    % Но. Код приводящий к эквивалентному результату:
+    \begin{equation}
+        \left\{\begin{aligned} % Теперь никаких предупреждеий
+            \dot x &= 2x + y\\ % Выравнивание строк по &
+            \dot y &= 3x + 5y % Выравнивание строк по &
+        \end{aligned}\right.
+    \end{equation}
+\end{document}

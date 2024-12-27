@@ -1,0 +1,90 @@
+\documentclass[a4paper, 12pt]{article}
+
+\input{../preamble.tex}
+
+\usepackage{amsthm}
+
+\begin{document}
+    \theoremstyle{plain} % Применение стиля plain для теорем документа
+
+
+    % Вложенные счётчики:
+    \newtheorem{theorem}{Теорема}[section] % Счётчик theorem будет обнуляться при инкрементировании section
+    \newtheorem{corollary}{Следствие}[theorem] % Счётчик corollary будет обнуляться при инкрементировании theorem
+    \newtheorem*{definition}{Следствие} % * => не нумеруется
+
+    \section{Раздел первый}
+    \begin{theorem} % Теорема
+        Текст.
+    \end{theorem}
+    \begin{theorem} % Теорема
+        Ещё текст.
+    \end{theorem}
+    \begin{proof} % Доказательство
+        Твивиально.
+    \end{proof}
+    \begin{corollary} % Следствие
+        И ещё немного текста.
+    \end{corollary}
+    \begin{definition} % Определение
+        Какое-то определяемое понятие.
+    \end{definition}
+
+    \section{Раздел второй}
+    \begin{theorem} % Теорема
+        Текст.
+    \end{theorem}
+    \begin{theorem} % Теорема
+        Ещё текст.
+    \end{theorem}
+    \begin{proof} % Доказательство
+        Твивиально.
+    \end{proof}
+    \begin{corollary} % Следствие
+        И ещё немного текста.
+    \end{corollary}
+    \begin{definition} % Определение
+        Какое-то определяемое понятие.
+    \end{definition}
+
+    \section{Раздел третий}
+    \begin{theorem} % Теорема
+        Текст.
+    \end{theorem}
+    \begin{theorem} % Теорема
+        Ещё текст.
+    \end{theorem}
+    \begin{proof} % Доказательство
+        Твивиально.
+    \end{proof}
+    \begin{corollary} % Следствие
+        И ещё немного текста.
+    \end{corollary}
+    \begin{definition} % Определение
+        Какое-то определяемое понятие.
+    \end{definition}
+    \pagebreak
+
+
+    % Общий счётчик:
+    \newcounter{my_count} % Инициализация счётчика my_count
+    \newtheorem{proposition}[my_count]{Утверждение} % Счётчик my_count является счётчиком proposition
+    \newtheorem{lemma}[my_count]{Лемма} % Счётчик my_count является счётчиком lemma
+
+    \begin{proposition} % Утверждение
+        Текст.
+    \end{proposition}
+    \begin{lemma} % Лемма
+        Второй текст.
+    \end{lemma}
+    \begin{proposition} % Утверждение
+        Третий текст.
+    \end{proposition}
+
+    \stepcounter{my_count} % Инкрементирование счётчика my_count
+    \begin{lemma} % Лемма
+        Четвёртый текст? (Нет, пятый!)
+    \end{lemma}
+
+% Вложенные и общие счётчики можно совмещать, если этого требует сложная структура документа
+\end{document}

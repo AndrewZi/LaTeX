@@ -1,0 +1,20 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[english, russian]{babel}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+    \textbf{Жирный}, \textit{Курсивный}, обычный
+
+    {\bfseries \itshape Жирное и курсивное}, а это обычное\dots
+    % \bfseries, \itshape - модификаторы (работают до конца блоков, где добавлены)
+
+    {\bf Жирное}, а это обычное\dots
+
+    {\it Курсивное}, а это обычное\dots
+
+    \textbf{\textit{Жирно-курсивный}}
+    
+    \textit{\textbf{Также жирно-курсивный}}
+\end{document}

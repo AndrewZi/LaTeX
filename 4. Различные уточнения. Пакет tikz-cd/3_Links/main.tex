@@ -1,0 +1,27 @@
+\documentclass[a4paper, 12pt]{article}
+
+\input{../preamble.tex}
+
+\usepackage{hyperref} % Необходимый пакет
+
+\hypersetup{ % Настройка ссылок (размещается или в файле преамбулы или в main.tex до \begin{document})
+    unicode = true, % Юникод в названиях разделов в PDF (в частности, для русского языка)
+    colorlinks = true, % Цветные ссылки вместо ссылок в рамках
+    linkcolor = blue, % Цвет внутренних ссылок
+    citecolor = green, % Цвет ссылок на библиографию
+    filecolor = magenta, % Цвет ссылок на файлы
+    urlcolor = blue % Цвет ссылок на URL
+    % ... <-- Есть настройки цветов ссылок других типов
+}
+
+% Задание других цветов:
+
+% 1) Встроенные возможности:
+% black!70!blue <-- 70% - чёрный, 30% - белый
+
+% 2) Используя пакет xcolor:
+% \definecolor{darkblue}{rgb}{0.6, 0.6, 0.9} <-- darkblue - новый цвет (можно использовать в коде)
+
+\begin{document}
+    Всё в комментариях\dots
+\end{document}

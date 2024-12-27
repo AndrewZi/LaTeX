@@ -1,0 +1,44 @@
+\documentclass[a4paper, 12pt]{article}
+
+\input{../preamble.tex}
+
+\usepackage{enumitem} % Для [label=\Alph*] или [label=\Roman*] в enumerate
+
+\renewcommand{\labelitemi}{\$} % Переопределение маркеров списков первого уровня вложенности
+
+\renewcommand{\labelitemii}{$\int$} % Переопределение маркеров списков второго уровня вложенности
+
+\begin{document}
+    С латинскими буквами:
+
+    \begin{enumerate} [label=\Alph*] % \Alph - заглавные буквы латинского алфавита
+        \item item A
+        \setcounter{enumi}{5}
+        \item another item % Здесь счётчик enumi = 6
+    \end{enumerate}
+    
+
+    С римскими числами:
+
+    \begin{enumerate} [label=\Roman*] % \Roman - римские числа
+        \item item A
+        \setcounter{enumi}{5}
+        \item another item % Здесь счётчик enumi = 6
+    \end{enumerate}
+
+
+
+    Ненумерованный список:
+    % Можно разместить переопределения здесь:
+    % т. е. перед фрагментом разметки, где эти переопределения должны быть применены
+    % \renewcommand{\labelitemi}{\$} Переопределение маркеров списков первого уровня вложенности
+    % \renewcommand{\labelitemii}{$\int$} Переопределение маркеров списков второго уровня вложенности
+    
+    \begin{itemize}
+        \item \begin{itemize}
+            \item Первый подэлемент % По умолчанию маркеруется тире
+            \item Не первый подэлемент % По умолчанию маркеруется тире
+        \end{itemize}
+        \item Не первый элемент % По умолчанию маркеруется жирными точками
+    \end{itemize}
+\end{document}

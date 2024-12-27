@@ -1,0 +1,47 @@
+\documentclass[a4paper, 12pt]{article}
+
+\input{../preamble.tex}
+
+\usepackage{amsmath}
+
+\usepackage{nicematrix}
+
+\begin{document}
+    \begin{align*}
+        \begin{pmatrix} % (...) <-- матрица
+            a & b\\
+            c & d
+        \end{pmatrix}
+    \end{align*}
+
+    \begin{align*}
+        \begin{vmatrix} % |...| <-- определитель
+            a & b\\
+            c & d
+        \end{vmatrix}
+    \end{align*}
+
+    \begin{align*}
+        \left|\begin{vmatrix} % ||...||
+            a & b\\
+            c & d
+        \end{vmatrix}\right|
+    \end{align*}
+
+    \[ % Отсутп между выражениями меньше, чем при align*
+        \begin{pmatrix} % Большая матрица
+            a_{11} & a_{12} & \cdots & a_{1n}\\ % \cdots - многоточие по центру строки
+            a_{21} & a_{22} & \cdots & a_{2n}\\
+            \vdots & \vdots & \ddots & \vdots\\
+            % \vdots - вертикальное многоточие, \ddots - диагональное многоточие
+            a_{n1} & a_{n2} & \cdots & a_{nn}\\
+        \end{pmatrix}
+    \]
+
+    \begin{align*}
+        \begin{pNiceArray}{cc|c} % Расширенная матрица
+            a_{11} & a_{12} & b_1\\
+            a_{21} & a_{22} & b_2\\
+        \end{pNiceArray}
+    \end{align*}
+\end{document}

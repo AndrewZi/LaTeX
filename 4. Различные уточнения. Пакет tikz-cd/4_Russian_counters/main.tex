@@ -1,0 +1,17 @@
+\documentclass[a4paper, 12pt]{article}
+
+\input{../preamble.tex}
+
+% Нужен \usepackage[russian]{babel} (есть в preamble.tex)
+
+\begin{document}
+    \newcounter{cyr} % Инициализация счётчика cyr
+    \setcounter{cyr}{5} % Задание значения 5 счётчику cyr
+    \asbuk{cyr} % вывод счётчика cyr (от 1 до 33 (!)) в представлении строчной буквы русского алфавита
+    \Asbuk{cyr} % вывод счётчика cyr (от 1 до 33 (!)) в представлении заглавной буквы русского алфавита
+
+
+    \stepcounter{cyr} % Инкрементирование счётчика cyr
+    \asbuk{cyr} % вывод счётчика cyr (от 1 до 33 (!)) в представлении строчной буквы русского алфавита
+    \Asbuk{cyr} % вывод счётчика cyr (от 1 до 33 (!)) в представлении заглавной буквы русского алфавита
+\end{document}

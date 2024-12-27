@@ -1,0 +1,42 @@
+\documentclass[a4paper, 12pt]{article}
+
+\input{../preamble.tex}
+
+\usepackage{amsmath}
+
+\usepackage{tikz-cd} % Для работы с коммутативными диаграммами
+
+
+% Справка:
+
+% \arrow{rr}{\varphi} - стрелка (специфично для tikz-cd):
+% rr - на 2 ячейки вправо (r);
+% \varphi - текст под стрелкой.
+
+% \arrow[swap]{rr}{\varphi} - стрелка (специфично для tikz-cd):
+% swap - инверсия отображения подписи стрелки;
+% dr - на 1 ячейку вниз (d), на 1 ячейку вправо (r);
+% \pi - текст над стрелкой.
+
+% \arrow[dashrightarrow, swap]{dl}{\psi} - стрелка (специфично для tikz-cd):
+% dashrightarrow - пунктирная стрелка;
+% swap - инверсия отображения подписи стрелки;
+% dl - на 1 ячейку вниз (d), на 1 ячейку влево (l);
+% \psi - текст над стрелкой.
+
+% \arrow[dashrightarrow, swap]{ur}{\theta} - стрелка (специфично для tikz-cd):
+% dashrightarrow - пунктирная стрелка;
+% swap - инверсия отображения подписи стрелки;
+% ur - на 1 ячейку ввех (u), на 1 ячейку вправо (r);
+% \theta - текст над стрелкой.
+
+
+\begin{document}
+    \[
+        \begin{tikzcd}[column sep = large, row sep = huge] % <-- Между столбцами и строками запрашивается большое расстояние
+            G \arrow{rr}{\varphi} \arrow[swap]{dr}{\pi} & & \mathrm{Im\varphi} \arrow[dashrightarrow, swap]{dl}{\psi}
+            \\ % <-- \\ - разделитель строк, & - разделитель элементов строки
+            & G / K \arrow[dashrightarrow, swap]{ur}{\theta} & % Стрелки от G/K к ImPhi и от ImPhi к G/K совпали...
+        \end{tikzcd}
+    \]
+\end{document}

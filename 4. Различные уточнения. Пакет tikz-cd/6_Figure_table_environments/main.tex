@@ -1,0 +1,82 @@
+\documentclass[a4paper, 12pt]{article}
+
+\input{../preamble.tex}
+
+\usepackage{graphicx}
+
+\usepackage{wrapfig} % Для wrapfigure и wraptable
+
+% Нумерация у figure и wrapfigure; table и wraptable - общая (!)
+
+% Справка по идентификаторам расположения, регистр важен (!):
+% h - даёт рекомендацию LaTeX разместить объект как можно ближе к месту объявления, но в соответствии с его внутренними правилами;
+% t - размещает объект вверху страницы;
+% b - размещает объект внизу страницы;
+% p - размещает объект на специальной странице для всех таких объектов;
+% H - размещает объект прямо в месте объявления.
+
+\begin{document}
+    \begin{figure}[h] % <-- h - идентификатор расположения. См. справку выше
+        \includegraphics[width = 0.5\textwidth]{image.png}
+        \caption{Множество Мандельброта} % Подпись под изображением
+        \label{fig:figure2} % Создание указателя на объект
+    \end{figure}
+
+
+    \begin{table}[p] % <-- p - идентификатор расположения. См. справку выше
+        \begin{tabular}{|c|c|}
+            a & b\\
+            c & d
+        \end{tabular}
+        \caption{Какие-то данные} % Подпись под таблицей
+        \label{tab:table1} % Создание указателя на объект
+    \end{table}
+
+    \begin{table}[p] % <-- p - идентификатор расположения. См. справку выше
+        \begin{tabular}{|c|c|}
+            e & f\\
+            g & h
+        \end{tabular}
+        \caption{Какие-то другие данные} % Подпись под таблицей
+        \label{tab:table2} % Создание указателя на объект
+    \end{table}
+
+    \setcounter{table}{7} % Изменение счётчика table (отвечает за нумерацию таблиц в документе)
+
+    \begin{table}[p] % <-- p - идентификатор расположения. См. справку выше
+        \begin{tabular}{|c|c|}
+            i & g\\
+            k & l
+        \end{tabular}
+        \caption{Ещё какие-то данные} % Подпись под таблицей
+        \label{tab:table8} % Создание указателя на объект
+    \end{table}
+
+    \begin{table}[p] % <-- p - идентификатор расположения. См. справку выше
+        \begin{tabular}{|c|c|}
+            m & n\\
+            o & p
+        \end{tabular}
+        \caption{Какие-то дополнительные данные} % Подпись под таблицей
+        \label{tab:table9} % Создание указателя на объект
+    \end{table}
+
+    Некоторый текст, который должен оптекать рисунок\dots
+    \begin{wrapfigure}{r}{100pt}
+    % r - расположение объекта (l - слева строки, r - справа строки); 100pt - ширина объекта
+        \includegraphics[width = 0.5\textwidth]{image.png}
+        \caption{Множество Мандельброта} % Подпись под изображением
+        \label{fig:figure3} % Создание указателя на объект
+    \end{wrapfigure}
+
+    % Некоторый текст, который должен оптекать таблицу\dots
+    % \begin{wraptable}{l}{100pt}
+    % l - расположение объекта (l - слева строки, r - справа строки); 100pt - ширина объекта
+    %     \begin{tabular}{|c|c|}
+    %         x & y\\
+    %         z & t
+    %     \end{tabular}
+    %     \caption{Какие-то переменные} Подпись под таблицей
+    %     \label{tab:table0} Создание указателя на объект
+    % \end{wraptable}
+\end{document}

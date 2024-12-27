@@ -1,0 +1,53 @@
+\documentclass[a4paper, 12pt]{article}
+
+\input{../preambule.tex}
+
+\usepackage{amsthm} % Пакет для создания теорем
+
+\theoremstyle{plain}
+% Встроенные стили теорем:
+% plain
+% definition
+% remark
+
+\newtheorem{theorem}{Теорема}[section] % без * - нумерованные теоремы
+% ^^^ Для теоремы: сначала номер секции, потом - номер теоремы в секции (наследование)
+\newtheorem{corollary}{Следствие}[theorem]
+\newtheorem*{definition}{Определение} % с * - не нумерованные теоремы
+
+\begin{document}
+    \section{Теоремы кинематики}
+
+    \begin{theorem}
+        Теорема о неразрывности
+    \end{theorem}
+
+    \begin{theorem}
+        Теорема о полноте
+    \end{theorem}
+
+
+    \section{Теоремы в структуре}
+
+    \begin{theorem}
+        Теорема.
+    \end{theorem}
+    
+    \begin{theorem}
+        Теорема дополнительная.
+    \end{theorem}
+
+    \begin{proof}
+        Доказательство тривиально.
+        \[x = 0 \qedhere\] % \qedhere - декларирует, в конце какой строки должен быть размещён символ Ч.Т.Д.
+% без \qedhere символ Ч.Т.Д. будет размещён на строке после x = 0, что не очень экономит место и вообще визуально неприятно.
+    \end{proof}
+
+    \begin{corollary}
+        Из теоремы.
+    \end{corollary}
+
+    \begin{definition}
+        Вектор "--- направленный отрезок.
+    \end{definition}
+\end{document}
